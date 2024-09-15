@@ -48,8 +48,8 @@
             routingKey: "");
 	3. Topic
 		-  binding key / routing key "multicasting" = Topic basically it's like direct exchange but instead of a specific routing key it looks for patterns there's also a headers exchange type that looks up a key value pair to send specific messages to specific queues 
-		- In case you run into this exception
-		![[Pasted image 20240912154056.png]]
+		- In case you run into this exception (in different file, couldn't figure out how to add it to this one)
+		
 ---
 - ### Message durability
 		 When RabbitMQ quits or crashes it will forget the queues and messages unless you tell it not to. Two things are required to make sure that messages aren't lost: we need to mark both the queue and messages as durable.
