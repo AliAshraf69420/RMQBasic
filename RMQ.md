@@ -57,15 +57,15 @@
 	`durable: true, // in queue declaration` 
 ---
 ### some sources I used or found and thought was worth checking out :
-[Start out with this](https://www.rabbitmq.com/tutorials#queue-tutorials)
-[Docker Image for RMQ](https://hub.docker.com/_/rabbitmq)
-[Good blog about SAC but it's written in java](https://www.rabbitmq.com/blog/2022/07/05/rabbitmq-3-11-feature-preview-single-active-consumer-for-streams)
-[Talks about Exchange types](https://www.cogin.com/articles/rabbitmq/rabbitmq-exchanges-guide.php)
-[Routing Exchange](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet)
-[Message Durability](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet#message-durability)
-[outdated .NET 6 yet insightful video on RMQ](https://www.youtube.com/watch?v=eEipVEq8F1k)
-[Protocol that is supported by RMQ](https://www.rabbitmq.com/tutorials/amqp-concepts#exchange-fanout)
-[Acks (Basically the consumer letting the publisher know that the message was successfully received) ](https://www.rabbitmq.com/docs/confirms)
+[Start out with this](https://www.rabbitmq.com/tutorials#queue-tutorials) \n
+[Docker Image for RMQ](https://hub.docker.com/_/rabbitmq) \n
+[Good blog about SAC but it's written in java](https://www.rabbitmq.com/blog/2022/07/05/rabbitmq-3-11-feature-preview-single-active-consumer-for-streams) \n
+[Talks about Exchange types](https://www.cogin.com/articles/rabbitmq/rabbitmq-exchanges-guide.php) \n
+[Routing Exchange](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet) \n
+[Message Durability](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet#message-durability) \n
+[outdated .NET 6 yet insightful video on RMQ](https://www.youtube.com/watch?v=eEipVEq8F1k) \n
+[Protocol that is supported by RMQ](https://www.rabbitmq.com/tutorials/amqp-concepts#exchange-fanout) \n
+[Acks (Basically the consumer letting the publisher know that the message was successfully received) ](https://www.rabbitmq.com/docs/confirms) \n
 
 
 
