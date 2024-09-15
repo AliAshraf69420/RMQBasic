@@ -3,14 +3,18 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
 var factory = new ConnectionFactory { HostName = "localhost" };
-using var connection = factory.CreateConnection();
-using var channel = connection.CreateModel();
+ var connection = factory.CreateConnection();
+ var channel = connection.CreateModel();
+var queueArgs = new Dictionary<string, object>
+{
+    { "x-single-active-consumer", true } // Enable Single Active Consumer mode
+};
 
 channel.QueueDeclare(queue: "hello",
-                     durable: false,
+                     durable: true,
                      exclusive: false,
                      autoDelete: false,
-                     arguments: null);
+                     arguments: queueArgs);
 
 Console.WriteLine(" [*] Waiting for messages.");
 
@@ -27,5 +31,3 @@ channel.BasicConsume(queue: "hello",
 
 Console.WriteLine(" Press [enter] to exit.");
 Console.ReadLine();
-
-

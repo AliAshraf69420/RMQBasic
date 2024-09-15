@@ -1,15 +1,22 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Text;
+﻿using System.Text;
 using RabbitMQ.Client;
+
 var factory = new ConnectionFactory { HostName = "localhost" };
-using var connection = factory.CreateConnection();
-using var channel = connection.CreateModel();
+ var connection = factory.CreateConnection();
+ var channel = connection.CreateModel();
+
+// Delete the existing queue if it exists
+
+var queueArgs = new Dictionary<string, object>
+{
+    { "x-single-active-consumer", true } // Enable Single Active Consumer mode
+};
+
 channel.QueueDeclare(queue: "hello",
-                     durable: false,
+                     durable: true,
                      exclusive: false,
                      autoDelete: false,
-                     arguments: null);
-
+                     arguments: queueArgs);
 const string message = "Hello World!";
 var body = Encoding.UTF8.GetBytes(message);
 
